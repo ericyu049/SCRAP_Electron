@@ -1,0 +1,42 @@
+<div class="container">
+    <form [formGroup]="paramForm" class="form column-align">
+        <div class="form-item row-align" style="font-size: 9pt">
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>Directory</mat-label>
+                <input matInput type="text" formControlName="directory">
+            </mat-form-field>
+        </div>
+        <div class="form-item row-align">
+            <mat-form-field class="form-field" appearance="outline" style="font-size: 9pt">
+                <mat-label>Adapter File</mat-label>
+                <input matInput type="text" formControlName="adapterFile">
+            </mat-form-field>
+            <button type="button" mat-stroked-button color="primary" (click)="adapterFileBrowse.click()">Browse</button>
+            <input #adapterFileBrowse type="file" class="file-input" (change)="onFileSelected($event)">
+
+        </div>
+        <div class="form-item row-align" style="font-size: 9pt">
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>Reference Directory</mat-label>
+                <input matInput type="text" formControlName="referenceDir">
+            </mat-form-field>
+        </div>
+        <div class="form-item row-align" style="font-size: 9pt">
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>miRBase Species Abbreviation</mat-label>
+                <input matInput type="text" formControlName="miRBase_species_abbr">
+            </mat-form-field>
+        </div>
+        <div class="form-item row-align" style="font-size: 9pt">
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>Genome Species Abbreviation</mat-label>
+                <input matInput type="text" formControlName="genome_species_abbr">
+            </mat-form-field>
+        </div>
+        <mat-checkbox formControlName="pairedEnd">Paired End</mat-checkbox>
+        <mat-checkbox formControlName="preFiltered">Pre Filtered</mat-checkbox>
+    </form>
+    <div class="action-container">
+        <button mat-raised-button color="primary" [disabled]="!isValid" (click)="submit()">Start Pipeline</button>
+    </div>
+</div>

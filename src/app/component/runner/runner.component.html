@@ -1,0 +1,15 @@
+<div class="container column-align">
+    <div class="steps column-align">
+        <div *ngFor="let step of steps" class="step row-align">
+            <div class="step_name">
+                {{step.name}}
+            </div>
+            <div class="spacer"></div>
+            <div class="icon-container">
+                <mat-icon *ngIf="step.status === 'completed'" class="status_icon">check_circle</mat-icon>
+
+            </div>
+        </div>
+
+    </div>
+</div>

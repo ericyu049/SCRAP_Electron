@@ -1,0 +1,25 @@
+.container {
+    padding: 15px;
+    .steps {
+        width: 700px;
+        row-gap: 25px;
+
+        .step {
+            align-items: center;
+            column-gap: 5px;
+            .step_name {
+                font-size: 14pt;
+            }
+            .spacer {
+                flex-grow: 1;
+                border: solid 1px;
+            }
+            .icon-container {
+                height: 24px;
+                width: 24px;
+                min-width: 24px;
+                color: rgb(0, 199, 0);
+            }
+        }
+    }
+}

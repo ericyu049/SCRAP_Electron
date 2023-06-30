@@ -1,0 +1,22 @@
+.container {
+    padding: 15px;
+    .form {
+        .form-item {
+            align-items: flex-start;
+            column-gap: 10px;
+            font-size: 9pt;
+            .form-field {
+                width: 500px;
+            }
+        }
+        button {
+            height: 56px;
+        }
+        .file-input {
+            display: none;
+        }
+    }
+    .action-container {
+        padding-top: 15px;
+    }
+}
